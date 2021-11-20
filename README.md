@@ -5,7 +5,7 @@
 Sem-3 WDW project named "FightAgainstCovid-19".It will track to the live cases of Corona country wise, it will also tell you about nearer hospitals, precautions for being healthy, about vaccination slots, symptoms for covid-19.
 
 
-## Language Used: HTML, CSS, JavaScript
+
 
   
 ## Features
