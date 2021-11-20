@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/f6816dd194.js' crossorigin='anonymous'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>About us</title>
+    <link rel="icon" href="emoji.png" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="stylea.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+         :root {
+            --red: #FF4F5B;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            transition: all .3s cubic-bezier(.16, .8, .62, 1.52);
+        }
+        
+        *::selection {
+            background: var(--red);
+            color: #fff;
+        }
+        
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
+        
+        header {
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 1.5rem 7%;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            z-index: 20;
+            text-decoration: none;
+            height: 10.5%;
+        }
+        
+        header a.logo {
+            text-decoration: none;
+        }
+        
+        header a.logo:hover {
+            text-decoration: none;
+            color: #666;
+        }
+        
+        header .logo {
+            font-size: 2.5rem;
+            color: #666;
+        }
+        
+        header .logo span {
+            color: var(--red);
+        }
+        
+        header .navbar ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        header .navbar ul li {
+            margin-left: 2.5rem;
+            margin-top: 0.5%;
+        }
+        
+        header .navbar ul li a {
+            color: #999;
+            font-size: 2rem;
+            text-decoration: none;
+        }
+        
+        header .navbar ul li a.active,
+        header .navbar ul li a:hover {
+            color: var(--red);
+            border-bottom: .2rem solid var(--red);
+            padding: .7rem 0;
+        }
+        
+        #menu {
+            font-size: 3rem;
+            color: #999;
+            cursor: pointer;
+            display: none;
+        }
+        
+        @media(max-width:991px) {
+            html {
+                font-size: 55%;
+            }
+        }
+        
+        @media(max-width:768px) {
+            #menu {
+                display: block;
+            }
+            header .navbar {
+                position: fixed;
+                top: 6.7rem;
+                left: -120%;
+                height: 100%;
+                width: 100%;
+                background: #eee;
+                border-top: .2rem solid rgba(59, 47, 47, 0.1);
+            }
+            header .navbar ul {
+                display: flexbox;
+                flex-flow: column;
+                text-align: center;
+                justify-content: center;
+                margin-left: 40%;
+                margin-top: -55%;
+                margin-right: 10%;
+            }
+            header .navbar ul li {
+                width: 500%;
+                margin: 1rem 0;
+            }
+            header .navbar ul li a {
+                display: block;
+                padding: 1rem;
+            }
+            header .navbar ul li a.active,
+            header .navbar ul li a:hover {
+                padding: 1rem;
+                background-color: var(--red);
+                color: #fff;
+                border: none;
+                border-radius: 5rem;
+            }
+            header .navbar.nav-toggle {
+                left: 0;
+            }
+            .fa-times {
+                transform: rotate(180deg);
+            }
+        }
+        
+        footer {
+            position: relative;
+            height: auto;
+            width: 100vw;
+            font-family: "Open sans";
+            margin-top: -31.5%;
+            color: white;
+            z-index: 10;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .footer-bottom p {
+            font-size: 20px;
+            word-spacing: 2px;
+        }
+        
+        @media(max-width:768px) {
+            footer {
+                margin-top: -25%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a class="logo">C<span class="fas fa-virus"></span>VID-19</a>
+
+        <div id="menu" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="detail.html">Information</a></li>
+                <li><a class="active" href="about_us.html">About us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="project">
+        <span style="padding-bottom: 10px; font-family: 'Josefin Sans', sans-serif;font-weight: 900; color: pink;"><em><center>About Our Project</center></em></span>
+        <p class="info">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This website gives information about awareness of Covid-19.One can find live record of Corona cases in any country.Also one can get information about number of
+            deaths, number of recovered cases of any country.You can also find nearer hospital.Also one can get information about preccautions. In this pandemic situation there is also one page for vaccine related information. Our main motive is to aware
+            people about Covid-19. Thank you!!!!</p>
+    </div>
+    <center>
+        <h3 style="margin-top: 4%;font-size: 35px;font-family: 'Josefin Sans', sans-serif;font-weight: 900; color: pink;">Meet Our Team</h3>
+    </center>
+    <div class="main center">
+        <div class="box center">
+            <img src="profile.jpeg" alt="">
+            <div>
+                <p class="user_name">Hetshree Parmar</p>
+                <p class="skills">ID No: 20CEUOS104</p>
+            </div>
+            <div class="arr_container center">
+                <i class="fas fa-arrow-right off"></i>
+            </div>
+            <div class="left_container off">
+                <p>Skills</p>
+                <div class="skills">
+                    <div>HTML</div>
+                    <div>CSS</div>
+                    <div>JavaScript</div>
+                    <div>JQuery</div>
+                    <div>php</div>
+                </div>
+                <div class="icons">
+                    <a href="https://github.com/hetshree999" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hetshree-parmar-3439a620b/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/hetshree.parmar.10" alt="" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/___hetshree910__?r=nametag" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+                <div class="cancel center">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </div>
+        <div class="box center">
+            <img src="f.jpeg" alt="">
+            <div>
+                <p class="user_name">Foram Dalsaniya</p>
+                <p class="skills">ID No: 20CEUOG113</p>
+            </div>
+            <div class="arr_container1 center">
+                <i class="fas fa-arrow-right off1"></i>
+            </div>
+            <div class="left_container1 off1">
+                <p>Skills</p>
+                <div class="skills">
+                    <div>HTML</div>
+                    <div>CSS</div>
+                    <div>JavaScript</div>
+                    <div>JQuery</div>
+                    <div>php</div>
+                </div>
+                <div class="icons">
+                    <a href="https://github.com/ForamDalsaniya" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/foram-dalsaniya-795b46209" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="" alt=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                </div>
+                <div class="cancel1 center">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </div>
+        <div class="box center">
+            <img src="a.jpeg" alt="">
+            <div>
+                <p class="user_name">Amisha Thummar</p>
+                <p class="skills">ID No: 20CEUOT062</p>
+            </div>
+            <div class="arr_container2 center">
+                <i class="fas fa-arrow-right off2"></i>
+            </div>
+            <div class="left_container2 off2">
+                <p>Skills</p>
+                <div class="skills">
+                    <div>HTML</div>
+                    <div>CSS</div>
+                    <div>JavaScript</div>
+                    <div>JQuery</div>
+                    <div>php</div>
+                </div>
+                <div class="icons">
+                    <a href="https://github.com/Amisha188" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://linkedin.com/in/amisha-thummar-60867720a" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="" alt=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                </div>
+                <div class="cancel2 center">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-bottom">
+            <p>Copyright &copy;2021 FightAgainstCovid</p>
+        </div>
+    </footer>
+    <script>
+        const clc = document.querySelector(".cancel");
+        const arr = document.querySelector(".arr_container");
+        const left_container = document.querySelector(".left_container");
+        arr.addEventListener("click", () => {
+            arr.classList.add("active_arr");
+            if (left_container.classList.contains("off")) {
+                left_container.classList.remove("off");
+                left_container.classList.add("active");
+            }
+        });
+        clc.addEventListener("click", () => {
+            arr.classList.remove("active_arr");
+            if (left_container.classList.contains("active")) {
+                left_container.classList.remove("active");
+                left_container.classList.add("off");
+            }
+        });
+        const clc1 = document.querySelector(".cancel1");
+        const arr1 = document.querySelector(".arr_container1");
+        const left_container1 = document.querySelector(".left_container1");
+        arr1.addEventListener("click", () => {
+            arr1.classList.add("active_arr1");
+            if (left_container1.classList.contains("off1")) {
+                left_container1.classList.remove("off1");
+                left_container1.classList.add("active");
+            }
+        });
+        clc1.addEventListener("click", () => {
+            arr1.classList.remove("active_arr1");
+            if (left_container1.classList.contains("active")) {
+                left_container1.classList.remove("active");
+                left_container1.classList.add("off1");
+            }
+        });
+
+        const clc2 = document.querySelector(".cancel2");
+        const arr2 = document.querySelector(".arr_container2");
+        const left_container2 = document.querySelector(".left_container2");
+        arr2.addEventListener("click", () => {
+            arr2.classList.add("active_arr2");
+            if (left_container2.classList.contains("off2")) {
+                left_container2.classList.remove("off2");
+                left_container2.classList.add("active");
+            }
+        });
+        clc2.addEventListener("click", () => {
+            arr2.classList.remove("active_arr2");
+            if (left_container2.classList.contains("active")) {
+                left_container2.classList.remove("active");
+                left_container2.classList.add("off2");
+            }
+        });
+    </script>
+</body>
+
+</html>

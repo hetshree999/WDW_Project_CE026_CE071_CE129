@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    left: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.container1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#video2text {
+    display: none;
+    overflow: hidden;
+}
+
+#video3text {
+    display: none;
+    overflow: hidden;
+}
+
+#video4text {
+    display: none;
+    overflow: hidden;
+}
+
+#video5text {
+    display: none;
+    overflow: hidden;
+}
+
+video {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    object-fit: cover;
+    transition: all 1.2s linear;
+    z-index: -10;
+}
+
+.video1 {
+    opacity: 1;
+}
+
+.video2 {
+    opacity: 0;
+}
+
+.video3 {
+    opacity: 0;
+}
+
+.video4 {
+    opacity: 0;
+}
+
+.video5 {
+    opacity: 0;
+}
+
+.con {
+    max-width: 1170px;
+    width: 100%;
+    margin: auto;
+}
+
+.h::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 78px;
+    width: 100%;
+    height: 89.5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.h .h-text {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.h .h-text h1 {
+    font-size: 70px;
+    color: #ffffff;
+    line-height: 100px;
+    font-weight: 700;
+    margin-top: 170px;
+}
+
+.home .home-text p {
+    margin: 0;
+    overflow: hidden;
+}
+
+.h .h-text p span {
+    font-size: 60px;
+    color: #ff2c45;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 90px;
+}
+
+span {
+    animation: slide 0.2s linear 1;
+}
+
+@keyframes slide {
+    0% {
+        line-height: 150px;
+        color: black;
+    }
+    50% {
+        line-height: 120px;
+    }
+    100% {
+        line-height: 90px;
+    }
+}
+
+@media(max-width:768px) {
+    .h .h-text h1 {
+        font-size: 35px;
+        line-height: 100px;
+    }
+    .h .h-text p span {
+        font-size: 35px;
+    }
+    .h::before {
+        content: '';
+        position: fixed;
+        left: 2%;
+        top: 25%;
+        align-items: center;
+        width: 95%;
+        height: 60.5%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+}

@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+}
+
+.box {
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .288);
+    border-radius: 23px;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-right: 5%;
+    margin-top: -29%;
+}
+
+.main {
+    height: 100vh;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.user_name {
+    margin-bottom: 5px;
+    font-size: 3rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.skills {
+    color: rgba(255, 255, 255, 0.555);
+    font-size: 1.3rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.arr_container,
+.arr_container1,
+.arr_container2,
+.cancel,
+.cancel1,
+.cancel2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: white;
+    bottom: 0;
+    right: 0;
+    border-radius: 23px 0 23px 0;
+    color: rgb(70, 70, 70);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.arr_container i,
+.arr_container1 i,
+.arr_container2 i {
+    transform: rotate(45deg);
+}
+
+.active_arr,
+.active_arr1,
+.active_arr2 {
+    transform: translate(80%, 80%);
+}
+
+.left_container,
+.left_container1,
+.left_container2 {
+    position: absolute;
+    background: #0f2027;
+    width: 100%;
+    height: 100%;
+    border-radius: 22px;
+    padding: 40px 0 0 20px;
+    transition: all .4s;
+}
+
+.off,
+.off1,
+.off2 {
+    transform: translate(-80%, -80%) rotate(90deg);
+}
+
+.active {
+    transform: translate(0) rotate(0);
+}
+
+.left_container p,
+.left_container1 p,
+.left_container2 p {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.left_container .skills div,
+.left_container1 .skills div,
+.left_container2 .skills div {
+    display: inline-block;
+    color: rgb(155, 155, 155);
+    border: 1px solid rgb(155, 155, 155);
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    margin: 4px 4px 4px 0;
+}
+
+.left_container .icons,
+.left_container1 .icons,
+.left_container2 .icons {
+    font-size: 2.5rem;
+    margin-top: 19px;
+}
+
+.left_container .icons i,
+.left_container1 .icons i,
+.left_container2 .icons i {
+    color: #cfcfcf;
+    margin-right: 10px;
+    transition: all .4s;
+}
+
+.left_container .icons i:hover,
+.left_container1 .icons i:hover,
+.left_container2 .icons i:hover {
+    color: #2c5364;
+}
+
+.project {
+    margin-top: 8%;
+    font-size: 35px;
+    color: white;
+    text-align: justify;
+}
+
+.project p {
+    padding-left: 2%;
+    padding-right: 3%;
+    font-size: 25px;
+}
+
+@media(max-width:768px) {
+    .project {
+        margin-top: 20%;
+    }
+    .box {
+        height: 330px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 3%;
+        margin-right: 1.58%;
+    }
+    .user_name {
+        font-size: 2rem;
+    }
+    .left_container p,
+    .left_container1 p,
+    .left_container2 p {
+        margin-bottom: 15px;
+        font-size: 1.9rem;
+    }
+    .left_container .skills div,
+    .left_container1 .skills div,
+    .left_container2 .skills div {
+        font-size: 1.4rem;
+    }
+    .left_container .icons,
+    .left_container1 .icons,
+    .left_container2 .icons {
+        font-size: 2.6rem;
+    }
+}

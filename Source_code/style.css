@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Rampart+One&display=swap');
+.video_container {
+    z-index: -1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.content {
+    display: flex;
+    margin-top: 15%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 3em;
+    color: maroon;
+    line-height: 0.70em;
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        color: maroon;
+        text-shadow: none;
+        opacity: 0;
+    }
+    100% {
+        font-size: 80px;
+        color: white;
+        text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4, 0 0 60px #03bcf4, 0 0 120px #03bcf4;
+        opacity: 1;
+        letter-spacing: 10px;
+    }
+}
+
+@media(max-width: 836px) {
+    .content {
+        font-size: 2em;
+        animation: animate 4s linear infinite;
+        margin-top: 50%;
+    }
+    @keyframes animate {
+        0% {
+            color: maroon;
+            text-shadow: none;
+            opacity: 0;
+            letter-spacing: 1px;
+        }
+        100% {
+            font-size: 40px;
+            color: white;
+            text-shadow: 0 0 5px #03bcf4, 0 0 10px #03bcf4, 0 0 15px #03bcf4, 0 0 20px #03bcf4, 0 0 25px #03bcf4, 0 0 30px #03bcf4, 0 0 40px #03bcf4;
+            opacity: 1;
+            letter-spacing: 8px;
+        }
+    }
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    transition: all 1.2s linear;
+    z-index: -10;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.logo span {
+    color: var(--red);
+}

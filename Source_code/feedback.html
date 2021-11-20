@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Feedback</title>
+    <link rel="icon" href="emoji.png" type="image/x-icon">
+    <link rel="stylesheet" href="stylef.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+         :root {
+            --red: #FF4F5B;
+        }
+        
+        * {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            transition: all .3s cubic-bezier(.16, .8, .62, 1.52);
+        }
+        
+        *::selection {
+            background: var(--red);
+            color: #fff;
+        }
+        
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
+        
+        header {
+            width: 100%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 1.5rem 7%;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            z-index: 1;
+            text-decoration: none;
+            height: 10.5%;
+        }
+        
+        header a.logo {
+            text-decoration: none;
+        }
+        
+        header a.logo:hover {
+            text-decoration: none;
+            color: #666;
+        }
+        
+        header .logo {
+            font-size: 2.5rem;
+            color: #666;
+        }
+        
+        header .logo span {
+            color: var(--red);
+        }
+        
+        header .navbar ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        header .navbar ul li {
+            margin-left: 2.5rem;
+        }
+        
+        header .navbar ul li a {
+            color: #999;
+            font-size: 2rem;
+            text-decoration: none;
+        }
+        
+        header .navbar ul li a.active,
+        header .navbar ul li a:hover {
+            color: var(--red);
+            border-bottom: .2rem solid var(--red);
+            padding: .7rem 0;
+        }
+        
+        #menu {
+            font-size: 3rem;
+            color: #999;
+            cursor: pointer;
+            display: none;
+        }
+        
+        @media(max-width:991px) {
+            html {
+                font-size: 55%;
+            }
+        }
+        
+        @media(max-width:768px) {
+            #menu {
+                display: block;
+            }
+            header .navbar {
+                position: fixed;
+                top: 6.7rem;
+                left: -120%;
+                height: 100%;
+                width: 100%;
+                background: #eee;
+                border-top: .2rem solid rgba(59, 47, 47, 0.1);
+            }
+            header .navbar ul {
+                display: flexbox;
+                flex-flow: column;
+                text-align: center;
+                justify-content: center;
+                margin-left: 38%;
+                padding-top: 10%;
+                margin-top: -60%;
+                margin-right: 7%;
+            }
+            header .navbar ul li {
+                width: 500%;
+                margin: 1rem 0;
+            }
+            header .navbar ul li a {
+                display: block;
+                padding: 1rem;
+            }
+            header .navbar ul li a.active,
+            header .navbar ul li a:hover {
+                padding: 1rem;
+                background-color: var(--red);
+                color: #fff;
+                border: none;
+                border-radius: 5rem;
+            }
+            header .navbar.nav-toggle {
+                left: 0;
+            }
+            .fa-times {
+                transform: rotate(180deg);
+            }
+        }
+        
+        footer {
+            position: fixed;
+            height: auto;
+            width: 100vw;
+            font-family: "Open sans";
+            bottom: 0;
+            color: rgba(253, 253, 253, 0.986);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .footer-bottom p {
+            font-size: 20px;
+            word-spacing: 2px;
+        }
+        
+        @media(max-width:768px) {
+            footer {
+                bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">C<span class="fas fa-virus"></span>VID-19</a>
+
+        <div id="menu" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="detail.html">Information</a></li>
+                <li><a href="about_us.html">About us</a></li>
+                <li><a class="active" href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="container2">
+        <div class="post">
+            <div class="text">Thanks for rating us!</div>
+            <div class="edit">EDIT</div>
+        </div>
+        <div class="star-widget">
+            <input class="b" type="radio" name="rate" id="rate-5">
+            <label for="rate-5" class="fas fa-star"></label>
+            <input class="b" type="radio" name="rate" id="rate-4">
+            <label for="rate-4" class="fas fa-star"></label>
+            <input class="b" type="radio" name="rate" id="rate-3">
+            <label for="rate-3" class="fas fa-star"></label>
+            <input class="b" type="radio" name="rate" id="rate-2">
+            <label for="rate-2" class="fas fa-star"></label>
+            <input class="b" type="radio" name="rate" id="rate-1">
+            <label for="rate-1" class="fas fa-star"></label>
+
+            <form action="javascript:sendMail()" name="form1" method="POST">
+                <h2></h2>
+                <div class="a" style="margin: 15px 0;">
+                    <input type="text" name="fname" id="fname" placeholder="First Name" style="width: 100%;
+                outline: none; border: 1px solid #333;
+                background: #222;
+                padding: 10px;
+                font-size: 17px;
+                resize: none;
+                overflow: hidden;   
+               
+                color: white; " required>
+                </div>
+                <div class="a">
+                    <input type="text" name="lname" id="lname" placeholder="Last Name" style="width: 100%;
+                outline: none; border: 1px solid #333;
+                background: #222;
+                padding: 10px;
+                font-size: 17px;
+                resize: none;
+                overflow: hidden;   
+                
+                color: white; " required>
+                </div>
+                <div class="a">
+                    <input type="email" name="e-mail" id="email" placeholder="E-mail Address" style="width: 100%;
+                outline: none; border: 1px solid #333;
+                background: #222;
+                padding: 10px;
+                font-size: 17px;
+                resize: none;
+                overflow: hidden;   
+                margin: 15px 0;
+                color: white; " required>
+                </div>
+                <div class="textarea">
+                    <textarea cols="30" id="msg" placeholder="Describe your experience.."></textarea>
+                </div>
+                <div class="btn">
+                    <button type="submit" onclick="required()">Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-bottom">
+            <p>Copyright &copy;2021 FightAgainstCovid</p>
+        </div>
+    </footer>
+    <script>
+        const btn = document.querySelector("button");
+        const post = document.querySelector(".post");
+        const widget = document.querySelector(".star-widget");
+        const editBtn = document.querySelector(".edit");
+
+        function required(e) {
+            var fnEmpt = document.forms["form1"]["fname"].value;
+            var lnEmpt = document.forms["form1"]["lname"].value;
+            var emailEmpt = document.forms["form1"]["e-mail"].value;
+
+            if (fnEmpt == "" || lnEmpt == "" || emailEmpt == "") {
+                alert("First enter all the fields");
+            } else {
+                widget.style.display = "none";
+                post.style.display = "block";
+                editBtn.onclick = () => {
+                    widget.style.display = "block";
+                    post.style.display = "none";
+                    e.preventDefault();
+                }
+
+            }
+        }
+    </script>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+    function sendMail() {
+        var Fname = $('#fname').val();
+        var Lname = $('#lname').val();
+        var eMail = $('#email').val();
+        var Msg = $('#msg').val();
+        var rate1 = $('#rate-1').val();
+        var rate2 = $('#rate-2').val();
+        var rate3 = $('#rate-3').val();
+        var rate4 = $('#rate-4').val();
+        var rate5 = $('#rate-5').val();
+        var rate;
+        if (rate1 == true) {
+            rate = "I Just Hate it";
+        } else if (rate2 == true) {
+            rate = "I don't like it";
+        } else if (rate3 == true) {
+            rate = "It is awesome";
+        } else if (rate4 = true) {
+            rate = "I Just like it";
+        } else {
+            rate = "I Just love it";
+        }
+
+
+        var Body = 'First Name: ' + Fname + '<br>Last Name: ' + Lname + '<br>E-mail: ' + eMail + '<br>Message: ' + Msg + '<br>Rate: ' + rate;
+        Email.send({
+            Host: "smtp.gmail.com",
+            Username: "fightagainstcovid.999@gmail.com",
+            Password: "Covid@2020",
+            To: "fightagainstcovid.999@gmail.com",
+            From: eMail,
+            Subject: "feedback from " + Fname + " " + Lname,
+            Body: Body
+        }).then(
+            message => {
+                if (message == 'OK') {
+                    alert("Thank you!!! for giving your valueable feedback");
+                } else {
+                    alert("Please try again, Something went wrong");
+                }
+            }
+        );
+    }
+</script>
+
+</html>
